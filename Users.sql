@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+--
+-- Host: localhost    Database: test
+-- ------------------------------------------------------
+-- Server version	5.7.12-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  `isAdmin` bit(1) NOT NULL,
+  `createdDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Sergey',25,'','2016-05-14 18:05:57'),(2,'Julia',25,'\0','2016-05-14 18:05:57'),(11,'Jackey',26,'\0','2016-05-22 14:52:49'),(34,'John',34,'\0','2016-05-22 09:12:56'),(35,'Alex',13,'\0','2016-05-22 09:12:12'),(36,'Snoopy',17,'\0','2016-05-22 14:52:05'),(37,'Vladimir',31,'\0','2016-05-22 14:53:26'),(38,'Nick',13,'','2016-05-22 14:53:39'),(39,'Viktor',19,'\0','2016-05-22 14:53:50'),(40,'Jakob',28,'\0','2016-05-22 14:54:03'),(41,'Pavel',25,'\0','2016-05-22 14:54:20'),(42,'Roman',17,'\0','2016-05-22 14:54:29'),(43,'Nataliya',23,'','2016-05-22 14:54:47'),(44,'Sophia',22,'','2016-05-22 14:55:22'),(45,'Evgen',20,'\0','2016-05-22 14:55:32'),(46,'Irina',34,'','2016-05-22 14:55:44'),(47,'Sergey',21,'\0','2016-05-22 14:56:01'),(48,'Marina',14,'\0','2016-05-22 14:56:11'),(49,'Robert',32,'\0','2016-05-22 14:56:27'),(50,'Kristina',24,'','2016-05-22 14:56:46');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-05-22 18:30:55
